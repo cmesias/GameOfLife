@@ -10,3 +10,6 @@ This is a Game of Life clone.
 
 # Video
 - https://www.youtube.com/watch?v=382ySk8wlnM
+
+# Game exe w/ src download
+- https://mega.nz/#!gc8nTZIT
