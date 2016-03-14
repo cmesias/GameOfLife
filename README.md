@@ -7,6 +7,6 @@ This is a Game of Life clone.
 - MinGW
 - Eclipse IDE C++
 - SDL2 Library
-- 
+
 # Video
 - https://www.youtube.com/watch?v=382ySk8wlnM
