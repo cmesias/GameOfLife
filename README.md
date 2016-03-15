@@ -3,9 +3,9 @@ This is a Game of Life clone.
 - Explanation Video: https://www.youtube.com/watch?v=CgOcEZinQ2I
 
 #Tools
-- MinGW
-- Eclipse IDE C++
-- SDL2 Library
+- MinGW: http://www.mingw.org/wiki/howto_install_the_mingw_gcc_compiler_suite
+- Eclipse IDE C++: http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/lunar
+- SDL2 Library: https://www.libsdl.org/download-2.0.php
 
 
 
