@@ -1,9 +1,8 @@
 # GameOfLife
-Game of Life clone
-
 This is a Game of Life clone.
+- Explanation Video: https://www.youtube.com/watch?v=CgOcEZinQ2I
 
-Tools
+#Tools
 - MinGW
 - Eclipse IDE C++
 - SDL2 Library
