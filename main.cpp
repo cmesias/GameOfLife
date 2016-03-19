@@ -75,7 +75,7 @@ void killCell(Cell cell[]) {
 	}
 }
 
-//This cells, dead or alive
+//This spawns a cell, dead or alive
 void spawnCell(Cell cell[], int x, int y, int w, int h, string state, bool alive) {
 	for (int i = 0; i < 6640; i++) {
 		if (!cell[i].alive) {
@@ -86,8 +86,6 @@ void spawnCell(Cell cell[], int x, int y, int w, int h, string state, bool alive
 			cell[i].state = state;
 			cell[i].alive = alive;
 			CELLS++;
-
-			//cout << CELLS << endl;
 			break;
 		}
 	}
