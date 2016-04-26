@@ -1,6 +1,3 @@
-int SCREEN_WIDTH = 664;
-int SCREEN_HEIGHT = 664;
-
 //Texture wrapper class
 class LTexture {
 public:
@@ -113,8 +110,8 @@ TTF_Font *gFontMunro19 = NULL;
 
 //LTexture gTextImage;
 LTexture gText;
-LTexture gBlock;
-
+LTexture gCells;
+SDL_Rect gCellsClips[3];
 
 LTexture::LTexture() {
 	//Initialize
@@ -231,8 +228,8 @@ void LTexture::render(int x, int y, int w, int h, SDL_Rect* clip, double angle,
 
 	//Set clip rendering dimensions
 	if (clip != NULL) {
-		renderQuad.w = clip->w;
-		renderQuad.h = clip->h;
+		renderQuad.w = w;
+		renderQuad.h = h;
 	}
 
 	//Render to screen
@@ -260,11 +257,18 @@ LWindow::LWindow() {
 }
 
 bool LWindow::init() {
+
+
+
+	SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, 1);
+	SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 16);
 	//Create window
-	mWindow = SDL_CreateWindow("Game of Life by Carl Mesias",
+	mWindow = SDL_CreateWindow("Game of Life Clone by Carl Mesias",
 			SDL_WINDOWPOS_CENTERED,
 	SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT,
 			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);// | SDL_WINDOW_MAXIMIZED);
+
+
 	if (mWindow != NULL) {
 		mMouseFocus = true;
 		mKeyboardFocus = true;
@@ -432,18 +436,36 @@ bool loadMedia() {
 	//Fonts
 	gFont25 = TTF_OpenFont("fonts/lsansuni.ttf", 25);
 	gFontMunro = TTF_OpenFont("fonts/Munro.ttf", 30);
-	gFontMunro16 = TTF_OpenFont("fonts/Munro.ttf", 12);
+	gFontMunro16 = TTF_OpenFont("fonts/Munro.ttf", 16);
 	gFontMunro19 = TTF_OpenFont("fonts/Munro.ttf", 19);
 
-	gBlock.loadFromFile("block.png");
-	gBlock.setAlpha(80);
+	//Load images
+	gCells.loadFromFile("resource/cells.png");
+
+	//Set clip - green cell
+	gCellsClips[0].x = 0;
+	gCellsClips[0].y = 0;
+	gCellsClips[0].w = 16;
+	gCellsClips[0].h = 16;
+
+	//Set clip - red cell
+	gCellsClips[1].x = 16;
+	gCellsClips[1].y = 0;
+	gCellsClips[1].w = 16;
+	gCellsClips[1].h = 16;
+
+	//Set clip - black border cell
+	gCellsClips[2].x = 32;
+	gCellsClips[2].y = 0;
+	gCellsClips[2].w = 16;
+	gCellsClips[2].h = 16;
 
 	return success;
 }
 
 void close() {
 	gText.free();
-	gBlock.free();
+	gCells.free();
 	TTF_CloseFont(gFont25);
 	TTF_CloseFont(gFontMunro);
 	TTF_CloseFont(gFontMunro16);
