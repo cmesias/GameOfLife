@@ -8,7 +8,15 @@ This is a Game of Life clone.
 - SDL2 Library: https://www.libsdl.org/download-2.0.php
 
 
+# April 26, 2016
+Update
+- Textures, and adjust amount of blocks spawned
 
+Game & Src Download
+- https://mega.nz/#!8EdQyL4R!y3xQMHCCRZdxxoCpal71dSDLyefxbbuyJ_YWMv-_ur8
+
+Video
+- https://youtu.be/k6mRWKLoLFI
 
 # March 15, 2016
 Update
