@@ -10,7 +10,7 @@ This is a Game of Life clone.
 
 # April 26, 2016
 Update
-- Textures, and adjust amount of blocks spawned
+- Textures, and adjusted amount of blocks spawned
 
 Game & Src Download
 - https://mega.nz/#!8EdQyL4R!y3xQMHCCRZdxxoCpal71dSDLyefxbbuyJ_YWMv-_ur8
