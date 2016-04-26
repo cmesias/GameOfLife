@@ -287,63 +287,6 @@ void renderCell(Cell cell[], int camX, int camY, int mx, int my) {
 
 				//Black border around cells
 				gCells.render(cell[i].x-camX,cell[i].y-camY, cell[i].w,cell[i].h, &gCellsClips[2]);
-
-				//If the cell has a cell above it
-				/*if (cell[i].neiN == 1){
-					SDL_Rect cellRect = { cell[i].x+7-camX,cell[i].y+7-camY, cell[i].h-14, 1 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderDrawRect(gRenderer, &cellRect);
-				}
-				//If the cell has a cell below it
-				if (cell[i].neiS == 1){
-					SDL_Rect cellRect = { cell[i].x+7-camX,cell[i].y+cell[i].h-7 -camY, cell[i].h-14, 1 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderDrawRect(gRenderer, &cellRect);
-				}
-				if (cell[i].neiW == 1){
-					SDL_Rect cellRect = { cell[i].x+7-camX,cell[i].y+7-camY, 1, cell[i].w-14 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderDrawRect(gRenderer, &cellRect);
-				}
-				//If the cell has a cell below it
-				if (cell[i].neiE == 1){
-					SDL_Rect cellRect = { cell[i].x+cell[i].w-7-camX,cell[i].y+7 -camY, 1, cell[i].w-14 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderDrawRect(gRenderer, &cellRect);
-				}
-
-				//If the cell has a cell left-above it
-				if (cell[i].neiNW == 1){
-					SDL_Rect cellRect = { cell[i].x-camX,cell[i].y-camY, 8, 8 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderFillRect(gRenderer, &cellRect);
-				}
-				//If the cell has a cell right-above it
-				if (cell[i].neiNE == 1){
-					SDL_Rect cellRect = { cell[i].x+cell[i].w-8-camX,cell[i].y-camY, 8, 8 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderFillRect(gRenderer, &cellRect);
-				}
-				//If the cell has a cell left-below it
-				if (cell[i].neiSW == 1){
-					SDL_Rect cellRect = { cell[i].x-camX,cell[i].y+cell[i].h-8-camY, 8, 8 };
-					SDL_SetRenderDrawColor(gRenderer, 25, 25, 255, 255);
-					SDL_RenderFillRect(gRenderer, &cellRect);
-				}
-				//If the cell has a cell right-below it
-				if (cell[i].neiSE == 1){
-					SDL_Rect cellRect = { cell[i].x+cell[i].w-8-camX,cell[i].y+cell[i].h-8-camY, 8, 8 };
-				/
-				/*std::stringstream number;
-				number << cell[i].total;
-				gText.loadFromRenderedText(number.str().c_str(), {255,255,255,255},gFontMunro16);
-				gText.render(cell[i].x-camX, cell[i].y-camY, gText.getWidth(), gText.getHeight());
-
-				std::stringstream number2;
-				number2 << i;
-				gText.loadFromRenderedText(number2.str().c_str(), {0,0,0,255},gFontMunro16);
-				gText.render(cell[i].x+cell[i].w-gText.getWidth()-camX, cell[i].y-camY, gText.getWidth(), gText.getHeight());*/
-
 			}
 			//Check if cell is on screen (the player has view of the cell)
 			cell[i].onScreen = false;
