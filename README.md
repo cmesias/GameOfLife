@@ -11,6 +11,8 @@ This is a Game of Life clone.
 # April 26, 2016
 Update
 - Textures, and adjusted amount of blocks spawned
+- Changed how blocks check their surroundings
+- Cells can go up and end up below the screen and vice versa
 
 Game & Src Download
 - https://mega.nz/#!8EdQyL4R!y3xQMHCCRZdxxoCpal71dSDLyefxbbuyJ_YWMv-_ur8
