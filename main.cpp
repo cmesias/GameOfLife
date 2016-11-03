@@ -282,7 +282,7 @@ void renderCell(Cell cell[], int camX, int camY, int mx, int my) {
 					gCells.render(cell[i].x-camX,cell[i].y-camY, cell[i].w,cell[i].h, &gCellsClips[0]);
 				} else{
 				//Dead cells
-					gCells.render(cell[i].x-camX,cell[i].y-camY, cell[i].w,cell[i].h, &gCellsClips[1] );
+					//gCells.render(cell[i].x-camX,cell[i].y-camY, cell[i].w,cell[i].h, &gCellsClips[1] );
 				}
 
 				//Black border around cells
